@@ -12,6 +12,13 @@
 		8716ADF71F3DD7A30082D241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8716ADF51F3DD7A30082D241 /* Main.storyboard */; };
 		8716ADF91F3DD7A30082D241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8716ADF81F3DD7A30082D241 /* Assets.xcassets */; };
 		8716ADFC1F3DD7A30082D241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8716ADFA1F3DD7A30082D241 /* LaunchScreen.storyboard */; };
+		8716AE041F3DDE0A0082D241 /* AppStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716AE031F3DDE0A0082D241 /* AppStatics.swift */; };
+		8716AE061F3DDF020082D241 /* CustomBGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716AE051F3DDF020082D241 /* CustomBGButton.swift */; };
+		8716AE0E1F3DE03E0082D241 /* BlockBertholdTextured.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8716AE071F3DE03E0082D241 /* BlockBertholdTextured.ttf */; };
+		8716AE111F3DE03E0082D241 /* DINPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8716AE0A1F3DE03E0082D241 /* DINPro-Regular.otf */; };
+		8716AE121F3DE03E0082D241 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8716AE0B1F3DE03E0082D241 /* DINPro-Light.otf */; };
+		8716AE131F3DE03E0082D241 /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8716AE0C1F3DE03E0082D241 /* DINPro-Bold.otf */; };
+		8716AE141F3DE03E0082D241 /* Block Berthold Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8716AE0D1F3DE03E0082D241 /* Block Berthold Condensed.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		8716ADF81F3DD7A30082D241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8716ADFB1F3DD7A30082D241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8716ADFD1F3DD7A30082D241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8716AE031F3DDE0A0082D241 /* AppStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatics.swift; sourceTree = "<group>"; };
+		8716AE051F3DDF020082D241 /* CustomBGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBGButton.swift; sourceTree = "<group>"; };
+		8716AE071F3DE03E0082D241 /* BlockBertholdTextured.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BlockBertholdTextured.ttf; sourceTree = "<group>"; };
+		8716AE0A1F3DE03E0082D241 /* DINPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Regular.otf"; sourceTree = "<group>"; };
+		8716AE0B1F3DE03E0082D241 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
+		8716AE0C1F3DE03E0082D241 /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Bold.otf"; sourceTree = "<group>"; };
+		8716AE0D1F3DE03E0082D241 /* Block Berthold Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Block Berthold Condensed.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +69,28 @@
 			isa = PBXGroup;
 			children = (
 				8716ADF11F3DD7A30082D241 /* AppDelegate.swift */,
+				8716AE031F3DDE0A0082D241 /* AppStatics.swift */,
+				8716AE051F3DDF020082D241 /* CustomBGButton.swift */,
 				8716ADF31F3DD7A30082D241 /* ViewController.swift */,
 				8716ADF51F3DD7A30082D241 /* Main.storyboard */,
 				8716ADF81F3DD7A30082D241 /* Assets.xcassets */,
 				8716ADFA1F3DD7A30082D241 /* LaunchScreen.storyboard */,
 				8716ADFD1F3DD7A30082D241 /* Info.plist */,
+				8716AE151F3DE0490082D241 /* Fonts */,
 			);
 			path = Wikianks;
+			sourceTree = "<group>";
+		};
+		8716AE151F3DE0490082D241 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8716AE071F3DE03E0082D241 /* BlockBertholdTextured.ttf */,
+				8716AE0A1F3DE03E0082D241 /* DINPro-Regular.otf */,
+				8716AE0B1F3DE03E0082D241 /* DINPro-Light.otf */,
+				8716AE0C1F3DE03E0082D241 /* DINPro-Bold.otf */,
+				8716AE0D1F3DE03E0082D241 /* Block Berthold Condensed.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +153,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8716AE121F3DE03E0082D241 /* DINPro-Light.otf in Resources */,
 				8716ADFC1F3DD7A30082D241 /* LaunchScreen.storyboard in Resources */,
+				8716AE0E1F3DE03E0082D241 /* BlockBertholdTextured.ttf in Resources */,
 				8716ADF91F3DD7A30082D241 /* Assets.xcassets in Resources */,
+				8716AE111F3DE03E0082D241 /* DINPro-Regular.otf in Resources */,
+				8716AE141F3DE03E0082D241 /* Block Berthold Condensed.otf in Resources */,
+				8716AE131F3DE03E0082D241 /* DINPro-Bold.otf in Resources */,
 				8716ADF71F3DD7A30082D241 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8716AE041F3DDE0A0082D241 /* AppStatics.swift in Sources */,
 				8716ADF41F3DD7A30082D241 /* ViewController.swift in Sources */,
 				8716ADF21F3DD7A30082D241 /* AppDelegate.swift in Sources */,
+				8716AE061F3DDF020082D241 /* CustomBGButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

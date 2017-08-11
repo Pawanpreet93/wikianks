@@ -28,6 +28,16 @@
 	<array>
 		<string>armv7</string>
 	</array>
+    
+    <key>UIAppFonts</key>
+    <array>
+        <string>DINPro-Bold.otf</string>
+        <string>DINPro-Light.otf</string>
+        <string>DINPro-Regular.otf</string>
+        <string>Block Berthold Condensed.otf</string>
+        <string>BlockBertholdTextured.ttf</string>
+    </array>
+    
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
