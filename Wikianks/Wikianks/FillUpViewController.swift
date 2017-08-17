@@ -63,7 +63,8 @@ class FillUpViewController: UIViewController, UICollectionViewDelegate, UICollec
     var finalSentences = [String]()
     var finalWordsThatGotReplaced = [String]()
     var jumbledWordsToShow = [String]()
-    
+    var trueFalseStatus = [Bool]()
+    var points = 0
     func createSentences(){
         
         let sentences = paragraphText.components(separatedBy: ". ")
@@ -119,6 +120,10 @@ class FillUpViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         if replacementWord == finalWordsThatGotReplaced[forIndex]{
             print("Points Increased")
+            points += 1
+            trueFalseStatus.append(true)
+        }else{
+            trueFalseStatus.append(false)
         }
         
         finalSentences[forIndex] = finalSentences[forIndex].replacingOccurrences(of: blank, with: replacementWord)
@@ -154,7 +159,6 @@ class FillUpViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WordsCollectionViewCell", for: indexPath) as! WordsCollectionViewCell
         
-//        cell.word.text = jumbledWordsToShow[indexPath.row]
         cell.wordForCell = jumbledWordsToShow[indexPath.row]
         
         return cell
