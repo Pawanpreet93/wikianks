@@ -19,6 +19,7 @@
 		8716AE121F3DE03E0082D241 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8716AE0B1F3DE03E0082D241 /* DINPro-Light.otf */; };
 		8716AE131F3DE03E0082D241 /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8716AE0C1F3DE03E0082D241 /* DINPro-Bold.otf */; };
 		8716AE141F3DE03E0082D241 /* Block Berthold Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8716AE0D1F3DE03E0082D241 /* Block Berthold Condensed.otf */; };
+		8716AE171F3DE90F0082D241 /* FillUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716AE161F3DE90F0082D241 /* FillUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8716AE0B1F3DE03E0082D241 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
 		8716AE0C1F3DE03E0082D241 /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Bold.otf"; sourceTree = "<group>"; };
 		8716AE0D1F3DE03E0082D241 /* Block Berthold Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Block Berthold Condensed.otf"; sourceTree = "<group>"; };
+		8716AE161F3DE90F0082D241 /* FillUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				8716AE031F3DDE0A0082D241 /* AppStatics.swift */,
 				8716AE051F3DDF020082D241 /* CustomBGButton.swift */,
 				8716ADF31F3DD7A30082D241 /* ViewController.swift */,
+				8716AE161F3DE90F0082D241 /* FillUpViewController.swift */,
 				8716ADF51F3DD7A30082D241 /* Main.storyboard */,
 				8716ADF81F3DD7A30082D241 /* Assets.xcassets */,
 				8716ADFA1F3DD7A30082D241 /* LaunchScreen.storyboard */,
@@ -174,6 +177,7 @@
 				8716AE041F3DDE0A0082D241 /* AppStatics.swift in Sources */,
 				8716ADF41F3DD7A30082D241 /* ViewController.swift in Sources */,
 				8716ADF21F3DD7A30082D241 /* AppDelegate.swift in Sources */,
+				8716AE171F3DE90F0082D241 /* FillUpViewController.swift in Sources */,
 				8716AE061F3DDF020082D241 /* CustomBGButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

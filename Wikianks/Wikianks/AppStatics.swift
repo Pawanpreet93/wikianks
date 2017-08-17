@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 let brandColor = UIColor(red: 0.290, green: 0.565, blue: 0.886, alpha: 1.00)
+let brighterBrandColor = UIColor(red: 0.651, green: 0.808, blue: 0.992, alpha: 1.00)
 let fontColorOnBrandColor = UIColor.white
 
 // MARK:- Fonts

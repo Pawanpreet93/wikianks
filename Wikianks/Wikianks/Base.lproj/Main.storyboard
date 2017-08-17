@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,7 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="LET'S PLAY"/>
                                 <connections>
-                                    <segue destination="DFy-7q-BXR" kind="show" id="5pf-Vh-FZf"/>
+                                    <segue destination="DFy-7q-BXR" kind="presentation" modalTransitionStyle="crossDissolve" id="5pf-Vh-FZf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,12 +62,157 @@
                     <view key="view" contentMode="scaleToFill" id="w4r-Tx-SEB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN2-Lc-YvF" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
+                                <rect key="frame" x="126" y="250" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6qP-CL-Fyq"/>
+                                    <constraint firstAttribute="width" constant="120" id="SIv-K1-1nj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="EASY"/>
+                                <connections>
+                                    <segue destination="MSp-t8-YKy" kind="presentation" modalTransitionStyle="flipHorizontal" id="Jh7-KL-fRO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pI-zz-cfQ" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
+                                <rect key="frame" x="126" y="308" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="hnM-Zx-Ukb"/>
+                                    <constraint firstAttribute="height" constant="50" id="nB2-Lu-Hdq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="MEDIUM"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-cW-1WA" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
+                                <rect key="frame" x="126" y="366" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="A77-Eh-QvE"/>
+                                    <constraint firstAttribute="height" constant="50" id="GpL-sw-4mz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="HARD"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xGR-cW-1WA" firstAttribute="centerX" secondItem="w4r-Tx-SEB" secondAttribute="centerX" constant="-1.5" id="1kz-Ye-ieJ"/>
+                            <constraint firstItem="1pI-zz-cfQ" firstAttribute="centerY" secondItem="w4r-Tx-SEB" secondAttribute="centerY" constant="-0.5" id="1ta-br-q3N"/>
+                            <constraint firstItem="yN2-Lc-YvF" firstAttribute="centerX" secondItem="w4r-Tx-SEB" secondAttribute="centerX" constant="-1.5" id="6Te-Lv-3xV"/>
+                            <constraint firstItem="1pI-zz-cfQ" firstAttribute="centerX" secondItem="w4r-Tx-SEB" secondAttribute="centerX" constant="-1.5" id="e0i-Qz-uZv"/>
+                            <constraint firstItem="xGR-cW-1WA" firstAttribute="centerY" secondItem="w4r-Tx-SEB" secondAttribute="centerY" constant="57.5" id="f6L-Cc-ETV"/>
+                            <constraint firstItem="yN2-Lc-YvF" firstAttribute="centerY" secondItem="w4r-Tx-SEB" secondAttribute="centerY" constant="-58.5" id="orb-9m-j3s"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmy-Yx-usw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="766" y="108"/>
+        </scene>
+        <!--Fill Up View Controller-->
+        <scene sceneID="B9a-QV-0ts">
+            <objects>
+                <viewController id="MSp-t8-YKy" customClass="FillUpViewController" customModule="Wikianks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b5X-71-k9d"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mm5-wh-M6y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wo6-1K-90A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="369-k2-Buq">
+                                <rect key="frame" x="16" y="20" width="343" height="410"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="410" id="f4f-6F-pgy"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6XV-aX-tCM">
+                                <rect key="frame" x="16" y="438" width="343" height="221"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="wrf-KK-oT1">
+                                    <size key="itemSize" width="125" height="47"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WordsCollectionViewCell" id="00G-Sr-oV7" customClass="WordsCollectionViewCell" customModule="Wikianks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="47"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47y-vy-D9V">
+                                                    <rect key="frame" x="8" y="4" width="109" height="39"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOv-9I-kuU">
+                                                            <rect key="frame" x="8" y="9" width="93" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="mOv-9I-kuU" firstAttribute="centerY" secondItem="47y-vy-D9V" secondAttribute="centerY" id="Oda-1H-Qgv"/>
+                                                        <constraint firstItem="mOv-9I-kuU" firstAttribute="leading" secondItem="47y-vy-D9V" secondAttribute="leading" constant="8" id="SKC-VL-T3j"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mOv-9I-kuU" secondAttribute="trailing" constant="8" id="WWq-uA-wfU"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="47y-vy-D9V" secondAttribute="trailing" constant="8" id="8KZ-Sl-Un1"/>
+                                            <constraint firstItem="47y-vy-D9V" firstAttribute="top" secondItem="00G-Sr-oV7" secondAttribute="top" constant="4" id="HcW-2W-lmH"/>
+                                            <constraint firstAttribute="bottom" secondItem="47y-vy-D9V" secondAttribute="bottom" constant="4" id="WJ7-Zs-ZuJ"/>
+                                            <constraint firstItem="47y-vy-D9V" firstAttribute="leading" secondItem="00G-Sr-oV7" secondAttribute="leading" constant="8" id="wev-bi-mHc"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="47y-vy-D9V" id="1ak-Fb-XEX"/>
+                                            <outlet property="word" destination="mOv-9I-kuU" id="Whk-lw-bn5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhO-WE-KaF" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
+                                <rect key="frame" x="112" y="585" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="R92-U2-wn3"/>
+                                    <constraint firstAttribute="height" constant="50" id="RRl-hA-82T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="SHOW RESULT"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6XV-aX-tCM" firstAttribute="top" secondItem="369-k2-Buq" secondAttribute="bottom" constant="8" id="876-3O-16c"/>
+                            <constraint firstItem="369-k2-Buq" firstAttribute="top" secondItem="b5X-71-k9d" secondAttribute="bottom" id="9uZ-RY-99P"/>
+                            <constraint firstItem="Mm5-wh-M6y" firstAttribute="top" secondItem="GhO-WE-KaF" secondAttribute="bottom" constant="32" id="HG5-zS-OSS"/>
+                            <constraint firstItem="Mm5-wh-M6y" firstAttribute="top" secondItem="6XV-aX-tCM" secondAttribute="bottom" constant="8" id="MZI-Dl-HaV"/>
+                            <constraint firstItem="6XV-aX-tCM" firstAttribute="trailing" secondItem="Wo6-1K-90A" secondAttribute="trailingMargin" id="TK1-60-snp"/>
+                            <constraint firstItem="GhO-WE-KaF" firstAttribute="centerX" secondItem="Wo6-1K-90A" secondAttribute="centerX" id="i03-QS-yOR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="369-k2-Buq" secondAttribute="trailing" id="pZp-Ki-rgE"/>
+                            <constraint firstItem="369-k2-Buq" firstAttribute="leading" secondItem="Wo6-1K-90A" secondAttribute="leadingMargin" id="uOX-lP-gr8"/>
+                            <constraint firstItem="6XV-aX-tCM" firstAttribute="leading" secondItem="Wo6-1K-90A" secondAttribute="leadingMargin" id="xiS-XN-b8r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="paragraphTextView" destination="369-k2-Buq" id="CpU-tB-slo"/>
+                        <outlet property="showResultButton" destination="GhO-WE-KaF" id="syF-SE-a13"/>
+                        <outlet property="wordsCollectionView" destination="6XV-aX-tCM" id="jX3-DK-NCr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Phh-wo-Wx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408.8" y="104.7976011994003"/>
         </scene>
     </scenes>
     <resources>
