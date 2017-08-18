@@ -32,7 +32,7 @@ extension Sequence {
 
 class FillUpViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    var paragraphText = "So, with large parts of Foundation missing, plus all “Core” and “Kit” frameworks completely absent, server-side Swift is significantly simpler. If you followed my books Hacking with Swift or Hacking with macOS, you’ll know that most of the learning is about figuring out how UIKit works. Not so with server-side Swift: because it’s significantly simpler, you can spend more time focusing on how to build projects with what you know rather than always having to learn new things. Because Apple’s framework footprint is significantly smaller, third-party libraries step in to fill the gaps. That’s where Kitura comes in: it’s a framework developed by IBM to provide the tools we need to build web apps and websites."
+    var paragraphText = "So, with large parts of Foundation missing, plus all “Core” and “Kit” frameworks completely absent, server-side Swift is significantly simpler. If you followed my books Hacking with Swift or Hacking with macOS, you’ll know that most of the learning is about figuring out how UIKit works. Not so with server-side Swift: because it’s significantly simpler, you can spend more time focusing on how to build projects with what you know rather than always having to learn new things. Because Apple’s framework footprint is significantly smaller, third-party libraries step in to fill the gaps. That’s where Kitura comes in: it’s a framework developed by IBM to provide the tools we need to build web apps and websites. So, with large parts of Foundation missing, plus all “Core” and “Kit” frameworks completely absent, server-side Swift is significantly simpler. If you followed my books Hacking with Swift or Hacking with macOS, you’ll know that most of the learning is about figuring out how UIKit works. Not so with server-side Swift: because it’s significantly simpler, you can spend more time focusing on how to build projects with what you know rather than always having to learn new things. Because Apple’s framework footprint is significantly smaller, third-party libraries step in to fill the gaps. That’s where Kitura comes in: it’s a framework developed by IBM to provide the tools we need to build web apps and websites."
     
     @IBOutlet weak var paragraphTextView:UITextView!{
         didSet{
@@ -50,26 +50,41 @@ class FillUpViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var currentIndex = 0
     var blank = " ____ "
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        createSentences()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     var finalSentences = [String]()
     var finalWordsThatGotReplaced = [String]()
     var jumbledWordsToShow = [String]()
     var trueFalseStatus = [Bool]()
     var points = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchParagraph()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func fetchParagraph(){
+        createSentences()
+    }
+    
     func createSentences(){
         
         let sentences = paragraphText.components(separatedBy: ". ")
         
-        let wordsToBeReplaced = [" is ", " of ", " or ", " an ", " can ", " to ", " a "].shuffled()
+        var wordsToBeReplaced = [String]()
+
+        switch selectedLevel{
+            
+        case .easy:
+            wordsToBeReplaced = [" is ", " of ", " or ", " an ", " can ", " to ", " a "].shuffled()
+        case .medium:
+            wordsToBeReplaced = [" is ", " of ", " or ", " an ", " can ", " to ", " a "].shuffled()
+        case .hard:
+            wordsToBeReplaced = [" is ", " of ", " or ", " an ", " can ", " to ", " a "].shuffled()
+            
+        }
         
         for index in 0..<sentences.count{
             
@@ -180,6 +195,19 @@ class FillUpViewController: UIViewController, UICollectionViewDelegate, UICollec
             }
         }
         
+    }
+    
+    @IBAction func showResult(_ sender: Any) {
+        performSegue(withIdentifier: "segueFromFillUpToResult", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueFromFillUpToResult"{
+        
+            let destination = segue.destination as! ResultViewController
+            destination.points = points
+            destination.trueFalseStatus = trueFalseStatus
+            
+        }
     }
     
 }

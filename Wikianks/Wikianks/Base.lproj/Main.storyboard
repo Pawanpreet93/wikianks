@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="108.39580209895054"/>
         </scene>
-        <!--View Controller-->
+        <!--Levels View Controller-->
         <scene sceneID="g10-iM-4cP">
             <objects>
-                <viewController id="DFy-7q-BXR" sceneMemberID="viewController">
+                <viewController id="DFy-7q-BXR" customClass="LevelsViewController" customModule="Wikianks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x7y-vn-h8S"/>
                         <viewControllerLayoutGuide type="bottom" id="ooa-wo-5FE"/>
@@ -74,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN2-Lc-YvF" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN2-Lc-YvF" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
                                 <rect key="frame" x="126" y="250" width="120" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6qP-CL-Fyq"/>
@@ -83,10 +83,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="EASY"/>
                                 <connections>
-                                    <segue destination="MSp-t8-YKy" kind="presentation" modalTransitionStyle="flipHorizontal" id="Jh7-KL-fRO"/>
+                                    <action selector="easy:" destination="DFy-7q-BXR" eventType="touchUpInside" id="AEA-ux-VkS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pI-zz-cfQ" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pI-zz-cfQ" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
                                 <rect key="frame" x="126" y="308" width="120" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="hnM-Zx-Ukb"/>
@@ -94,8 +94,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="MEDIUM"/>
+                                <connections>
+                                    <action selector="easy:" destination="DFy-7q-BXR" eventType="touchUpInside" id="e9y-ZN-K7O"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-cW-1WA" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-cW-1WA" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
                                 <rect key="frame" x="126" y="366" width="120" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="A77-Eh-QvE"/>
@@ -103,6 +106,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="HARD"/>
+                                <connections>
+                                    <action selector="easy:" destination="DFy-7q-BXR" eventType="touchUpInside" id="5Jy-rs-4l4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -115,6 +121,9 @@
                             <constraint firstItem="yN2-Lc-YvF" firstAttribute="centerY" secondItem="w4r-Tx-SEB" secondAttribute="centerY" constant="-58.5" id="orb-9m-j3s"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="MSp-t8-YKy" kind="presentation" identifier="segueFromLevelToFillUp" modalTransitionStyle="crossDissolve" id="g4c-dS-kPx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmy-Yx-usw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,7 +210,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="SHOW RESULT"/>
                                 <connections>
-                                    <segue destination="biw-XZ-7f2" kind="presentation" modalTransitionStyle="flipHorizontal" id="gal-iJ-jyl"/>
+                                    <action selector="showResult:" destination="MSp-t8-YKy" eventType="touchUpInside" id="qIP-RR-9zn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -222,16 +231,17 @@
                         <outlet property="paragraphTextView" destination="369-k2-Buq" id="CpU-tB-slo"/>
                         <outlet property="showResultButton" destination="GhO-WE-KaF" id="syF-SE-a13"/>
                         <outlet property="wordsCollectionView" destination="6XV-aX-tCM" id="jX3-DK-NCr"/>
+                        <segue destination="biw-XZ-7f2" kind="presentation" identifier="segueFromFillUpToResult" modalTransitionStyle="flipHorizontal" id="Ndd-Id-mnc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Phh-wo-Wx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408.8" y="104.7976011994003"/>
+            <point key="canvasLocation" x="1460" y="107"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="2hi-mb-4AF">
             <objects>
-                <viewController id="biw-XZ-7f2" sceneMemberID="viewController">
+                <viewController id="biw-XZ-7f2" customClass="ResultViewController" customModule="Wikianks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ANK-Ra-Fok"/>
                         <viewControllerLayoutGuide type="bottom" id="Cif-jz-T12"/>
@@ -241,13 +251,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88%" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cXW-Xq-hhV">
-                                <rect key="frame" x="16" y="52" width="311" height="160"/>
+                                <rect key="frame" x="16" y="52" width="311" height="159.5"/>
                                 <fontDescription key="fontDescription" name="BlockBertholdTextured" family="Block Berthold Textured" pointSize="200"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Your Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejj-fT-csW">
-                                <rect key="frame" x="16" y="200" width="343" height="43"/>
+                                <rect key="frame" x="16" y="199.5" width="343" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="TFI-vH-N7f"/>
                                 </constraints>
@@ -256,7 +266,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Your Performance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyn-SW-9CY">
-                                <rect key="frame" x="16" y="283" width="343" height="24"/>
+                                <rect key="frame" x="16" y="282.5" width="343" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="QUo-pc-xJQ"/>
                                 </constraints>
@@ -264,58 +274,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="W9n-L5-mru">
-                                <rect key="frame" x="16" y="323" width="343" height="52"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="OeJ-ay-YLY"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ddJ-qp-vOb">
-                                    <size key="itemSize" width="66" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WordsCollectionViewCell" id="5e5-3B-xkA" customClass="WordsCollectionViewCell" customModule="Wikianks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="66" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="66" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jeH-Xm-uwx">
-                                                    <rect key="frame" x="8" y="4" width="58" height="42"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDi-mN-sOd">
-                                                            <rect key="frame" x="8" y="11" width="42" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="BDi-mN-sOd" secondAttribute="trailing" constant="8" id="8j6-Az-Qod"/>
-                                                        <constraint firstItem="BDi-mN-sOd" firstAttribute="centerY" secondItem="jeH-Xm-uwx" secondAttribute="centerY" id="AeO-Hc-XKj"/>
-                                                        <constraint firstItem="BDi-mN-sOd" firstAttribute="leading" secondItem="jeH-Xm-uwx" secondAttribute="leading" constant="8" id="g1O-ww-DsH"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="jeH-Xm-uwx" firstAttribute="top" secondItem="5e5-3B-xkA" secondAttribute="top" constant="4" id="Lad-oo-EUJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="jeH-Xm-uwx" secondAttribute="bottom" constant="4" id="Q9n-si-qso"/>
-                                            <constraint firstItem="jeH-Xm-uwx" firstAttribute="leading" secondItem="5e5-3B-xkA" secondAttribute="leading" constant="8" id="jhW-Bn-tHw"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="bgView" destination="jeH-Xm-uwx" id="MFB-3s-lah"/>
-                                            <outlet property="word" destination="BDi-mN-sOd" id="cGR-RT-LaF"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWc-yU-Uij" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWc-yU-Uij" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
                                 <rect key="frame" x="112" y="585" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0Vs-NQ-rc5"/>
@@ -327,7 +286,7 @@
                                     <segue destination="DFy-7q-BXR" kind="presentation" modalTransitionStyle="flipHorizontal" id="8Ef-dq-qnc"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bju-30-chi" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bju-30-chi" customClass="CustomBGButton" customModule="Wikianks" customModuleProvider="target">
                                 <rect key="frame" x="112" y="527" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BTt-bx-XpJ"/>
@@ -335,36 +294,94 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="SHARE"/>
+                                <connections>
+                                    <action selector="shareResult:" destination="biw-XZ-7f2" eventType="touchUpInside" id="QJW-pd-e0I"/>
+                                </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sk8-u7-TI6">
+                                <rect key="frame" x="24" y="314" width="327" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="ozK-VK-AWU"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="yOa-Rq-1K0">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ResultCollectionViewCell" id="jJp-4k-HF9" customClass="ResultCollectionViewCell" customModule="Wikianks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fI4-Xr-BUY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="lGd-6w-sUq">
+                                                            <rect key="frame" x="8" y="8" width="34" height="34"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="lGd-6w-sUq" firstAttribute="leading" secondItem="fI4-Xr-BUY" secondAttribute="leading" constant="8" id="AyA-dv-pVG"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lGd-6w-sUq" secondAttribute="bottom" constant="8" id="RDV-Ag-5IO"/>
+                                                        <constraint firstItem="lGd-6w-sUq" firstAttribute="top" secondItem="fI4-Xr-BUY" secondAttribute="top" constant="8" id="hYg-Jz-nsU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lGd-6w-sUq" secondAttribute="trailing" constant="8" id="j6a-Q2-Nrj"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="fI4-Xr-BUY" secondAttribute="bottom" id="4rG-hO-lxi"/>
+                                            <constraint firstItem="fI4-Xr-BUY" firstAttribute="leading" secondItem="jJp-4k-HF9" secondAttribute="leading" id="Hjl-cK-MQD"/>
+                                            <constraint firstAttribute="trailing" secondItem="fI4-Xr-BUY" secondAttribute="trailing" id="HtI-yF-gnZ"/>
+                                            <constraint firstItem="fI4-Xr-BUY" firstAttribute="top" secondItem="jJp-4k-HF9" secondAttribute="top" id="eQi-j7-GIf"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="fI4-Xr-BUY" id="DLw-mr-0AK"/>
+                                            <outlet property="statusImageView" destination="lGd-6w-sUq" id="Io7-KA-ms9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="W9n-L5-mru" firstAttribute="leading" secondItem="s2B-0A-Pc4" secondAttribute="leadingMargin" id="0jw-Qv-Dob"/>
                             <constraint firstItem="Ejj-fT-csW" firstAttribute="leading" secondItem="s2B-0A-Pc4" secondAttribute="leadingMargin" id="BNu-6X-wMB"/>
                             <constraint firstItem="cXW-Xq-hhV" firstAttribute="top" secondItem="ANK-Ra-Fok" secondAttribute="bottom" constant="32" id="MbM-Db-yXi"/>
                             <constraint firstItem="Ejj-fT-csW" firstAttribute="top" secondItem="cXW-Xq-hhV" secondAttribute="bottom" constant="-12" id="Rca-2M-Hbf"/>
                             <constraint firstItem="YWc-yU-Uij" firstAttribute="top" secondItem="bju-30-chi" secondAttribute="bottom" constant="8" symbolic="YES" id="X9H-Ck-ssV"/>
+                            <constraint firstItem="sk8-u7-TI6" firstAttribute="top" secondItem="Jyn-SW-9CY" secondAttribute="bottom" constant="7.5" id="Xoh-HY-pMY"/>
                             <constraint firstItem="Ejj-fT-csW" firstAttribute="trailing" secondItem="s2B-0A-Pc4" secondAttribute="trailingMargin" id="YvN-Jb-elQ"/>
                             <constraint firstItem="Jyn-SW-9CY" firstAttribute="trailing" secondItem="s2B-0A-Pc4" secondAttribute="trailingMargin" id="aaC-Bl-MFQ"/>
-                            <constraint firstItem="W9n-L5-mru" firstAttribute="top" secondItem="Jyn-SW-9CY" secondAttribute="bottom" constant="16" id="bIi-bO-RcH"/>
                             <constraint firstItem="Jyn-SW-9CY" firstAttribute="top" secondItem="Ejj-fT-csW" secondAttribute="bottom" constant="40" id="e6f-IH-6dQ"/>
                             <constraint firstItem="YWc-yU-Uij" firstAttribute="centerX" secondItem="s2B-0A-Pc4" secondAttribute="centerX" id="hSr-eA-hdG"/>
+                            <constraint firstItem="sk8-u7-TI6" firstAttribute="leading" secondItem="s2B-0A-Pc4" secondAttribute="leadingMargin" constant="8" id="haY-dt-pL9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sk8-u7-TI6" secondAttribute="trailing" constant="8" id="i9x-0J-D3X"/>
                             <constraint firstItem="bju-30-chi" firstAttribute="leading" secondItem="YWc-yU-Uij" secondAttribute="leading" id="kUL-t2-Odi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cXW-Xq-hhV" secondAttribute="trailing" constant="32" id="lxj-Lx-hdY"/>
-                            <constraint firstItem="W9n-L5-mru" firstAttribute="trailing" secondItem="s2B-0A-Pc4" secondAttribute="trailingMargin" id="qir-Ge-B6k"/>
                             <constraint firstItem="Jyn-SW-9CY" firstAttribute="leading" secondItem="s2B-0A-Pc4" secondAttribute="leadingMargin" id="u5l-4m-gzI"/>
                             <constraint firstItem="Cif-jz-T12" firstAttribute="top" secondItem="YWc-yU-Uij" secondAttribute="bottom" constant="32" id="wlO-x5-bKV"/>
                             <constraint firstItem="cXW-Xq-hhV" firstAttribute="leading" secondItem="s2B-0A-Pc4" secondAttribute="leadingMargin" id="ylj-Oq-mSt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="percentageLabel" destination="cXW-Xq-hhV" id="9Tj-Ce-6dB"/>
+                        <outlet property="statusCollectionView" destination="sk8-u7-TI6" id="cYH-Zv-Rwh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch2-CL-0jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2037.5999999999999" y="104.7976011994003"/>
+            <point key="canvasLocation" x="2319" y="29"/>
         </scene>
     </scenes>
     <resources>
         <image name="Logo" width="215" height="119"/>
+        <image name="right" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8Ef-dq-qnc"/>

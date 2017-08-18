@@ -20,6 +20,8 @@
 		8716AE131F3DE03E0082D241 /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8716AE0C1F3DE03E0082D241 /* DINPro-Bold.otf */; };
 		8716AE141F3DE03E0082D241 /* Block Berthold Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8716AE0D1F3DE03E0082D241 /* Block Berthold Condensed.otf */; };
 		8716AE171F3DE90F0082D241 /* FillUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716AE161F3DE90F0082D241 /* FillUpViewController.swift */; };
+		8783CE561F4708AB0081D99B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8783CE551F4708AB0081D99B /* ResultViewController.swift */; };
+		8783CE581F47180C0081D99B /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8783CE571F47180C0081D99B /* LevelsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		8716AE0C1F3DE03E0082D241 /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Bold.otf"; sourceTree = "<group>"; };
 		8716AE0D1F3DE03E0082D241 /* Block Berthold Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Block Berthold Condensed.otf"; sourceTree = "<group>"; };
 		8716AE161F3DE90F0082D241 /* FillUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillUpViewController.swift; sourceTree = "<group>"; };
+		8783CE551F4708AB0081D99B /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		8783CE571F47180C0081D99B /* LevelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,9 @@
 				8716AE031F3DDE0A0082D241 /* AppStatics.swift */,
 				8716AE051F3DDF020082D241 /* CustomBGButton.swift */,
 				8716ADF31F3DD7A30082D241 /* ViewController.swift */,
+				8783CE571F47180C0081D99B /* LevelsViewController.swift */,
 				8716AE161F3DE90F0082D241 /* FillUpViewController.swift */,
+				8783CE551F4708AB0081D99B /* ResultViewController.swift */,
 				8716ADF51F3DD7A30082D241 /* Main.storyboard */,
 				8716ADF81F3DD7A30082D241 /* Assets.xcassets */,
 				8716ADFA1F3DD7A30082D241 /* LaunchScreen.storyboard */,
@@ -178,7 +184,9 @@
 				8716ADF41F3DD7A30082D241 /* ViewController.swift in Sources */,
 				8716ADF21F3DD7A30082D241 /* AppDelegate.swift in Sources */,
 				8716AE171F3DE90F0082D241 /* FillUpViewController.swift in Sources */,
+				8783CE581F47180C0081D99B /* LevelsViewController.swift in Sources */,
 				8716AE061F3DDF020082D241 /* CustomBGButton.swift in Sources */,
+				8783CE561F4708AB0081D99B /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +352,7 @@
 				8716AE021F3DD7A30082D241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
